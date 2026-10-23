@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (A x y)
   (cond ((= y 0) 0)

@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (exponent1 b n)
   (if (= n 0)

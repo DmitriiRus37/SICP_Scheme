@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (timed-prime-test n)
   (start-prime-test n))

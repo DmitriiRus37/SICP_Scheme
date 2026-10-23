@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (cubeitet-iter guess x)
   (if (good-enough? guess x)

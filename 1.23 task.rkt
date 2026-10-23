@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (square n) (* n n))
 (define (runtime) (current-inexact-milliseconds))
@@ -12,7 +13,7 @@
   (cond ((> (square test-divisor) n) 
          n)
         ((divides? test-divisor n) 
-         (display test-divisor))
+         test-divisor)
         (else (find-divisor 
                n 
                (next test-divisor)))))
@@ -21,7 +22,7 @@
   (start-prime-test n (runtime)))
 
 (define (start-prime-test n start-time)
-  (if (smallest-divisor n)
+  (if (= n (smallest-divisor n))
       (report-prime n (- (runtime) start-time))
       false))
 

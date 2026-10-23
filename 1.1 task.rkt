@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 10   ; 10
 (+ 5 3 4)   ; 12
 (- 9 1)   ; 8

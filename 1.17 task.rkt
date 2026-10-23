@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (exponent3 b n)
   (cond ((= n 0) 1)
@@ -22,8 +23,8 @@
 (define (new* a b)
   (cond ((= b 0) 0)
         ((= b 1) a)
-        (else (even? b)
-          (new* (double a) (halve b))
-          (+ a (new* a (- b 1))))))
+        ((even? b)
+          (new* (double a) (halve b)))
+        (else (+ a (new* a (- b 1))))))
 
           

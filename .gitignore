@@ -1,0 +1,8 @@
+# DrRacket / editor backups
+*.bak
+*.rkt~
+\#*\#
+
+# Racket build output and coverage reports
+compiled/
+coverage/

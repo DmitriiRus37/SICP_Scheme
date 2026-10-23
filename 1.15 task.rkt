@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (cube x) (* x x x))
 (define (p x) (- (* 3 x) (* 4 (cube x))))

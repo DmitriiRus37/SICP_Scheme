@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (triangle-element x y)
   (cond ((or (= x 1) (= y 1)) 1)

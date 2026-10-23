@@ -1,4 +1,5 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
 
 (define (fib n)
   (fib-iter 1 0 0 1 n))

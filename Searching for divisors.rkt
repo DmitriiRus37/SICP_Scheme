@@ -1,4 +1,7 @@
 #lang racket
+(provide (all-defined-out)) ; exported for tests/
+
+(define (square x) (* x x))
 
 (define (smallest-divisor n)
   (find-divisor n 2))
